@@ -1,5 +1,8 @@
 $slide-count: 4;
 $slide-width: 17rem;
+$tab-border-color: rgba(0, 0, 0, 0.5);
+$primary: #FAF7F2;
+$secondary: #FDC913;
 
 .intro {
     width: 60%;
@@ -12,7 +15,7 @@ $slide-width: 17rem;
         align-items: center;
         padding: 0.5rem 1.5rem 0.5rem 1.5rem;
         border: none;
-        border-bottom: 1.5px solid black;
+        border-bottom: 2px solid $tab-border-color;
         background-color: white;
         border-radius: 0.2rem;
         cursor: pointer;
@@ -23,9 +26,9 @@ $slide-width: 17rem;
 }
 
 #active {
-    border-left: 1.5px solid black;
-    border-top: 1.5px solid black;
-    border-right: 1.5px solid black;
+    border-left: 2px solid $tab-border-color;
+    border-top: 2px solid $tab-border-color;
+    border-right: 2px solid $tab-border-color;
     border-bottom: none;
 }
 
@@ -91,7 +94,7 @@ $slide-width: 17rem;
     width: $slide-width - 2rem;
     padding: 1rem;
     position: absolute;
-    background-color: darkgray;
+    background-color: $primary;
     border-bottom-left-radius: 1rem;
     border-bottom-right-radius: 1rem;
     p {
@@ -100,7 +103,7 @@ $slide-width: 17rem;
             margin: 0.7rem 0 0;
     }
     p span{
-        color: orange;
+        color: $secondary;
     }
 }
 
@@ -111,6 +114,7 @@ $slide-width: 17rem;
     display: flex;
     font-size: 1.25rem;
     align-items: center;
+    color: #666666;
     svg {
         width: 1.5rem;
         height: 1.5rem;

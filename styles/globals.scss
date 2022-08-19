@@ -5,11 +5,24 @@ body {
   font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
 }
-h1{
-  font-size: 3rem;
+
+h1,
+h2,
+h3,
+a{
+  font-family: Garamond, serif;
+  color: #292929;
 }
-p{
-  font-size: 1rem;
+h1 {
+  font-size: 4rem;
+}
+p {
+  font-size: 1.25rem;
+  color: #666666;
+}
+
+button {
+  background-color: #FDC913;
 }
 a {
   color: inherit;
@@ -18,14 +31,4 @@ a {
 
 * {
   box-sizing: border-box;
-}
-
-@media (prefers-color-scheme: light) {
-  html {
-    color-scheme: dark;
-  }
-  body {
-    color: white;
-    background: black;
-  }
 }

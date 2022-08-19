@@ -17,7 +17,7 @@ const Hero: FC = () => {
                 </div>
 
                 <div>
-                    <button className={styles.button}>Get Started</button>
+                    <button className={styles.button}>GET STARTED</button>
                 </div>
             </div>
             <div className={styles.image}>

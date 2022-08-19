@@ -10,7 +10,7 @@ const SignUp: FC = () => {
                     Letter of on become he tended active enable to.</p>
             </div>
             <div>
-                <h3 className={styles.redText}>Get Started for Free</h3>
+                <p className={styles.redText}>Get Started for Free</p>
                 <form>
                     <input className={styles.inputField} placeholder="Name" type="text" name="name" /><br />
                     <input className={styles.inputField} placeholder="Email Address" type="email" name="email" /><br />

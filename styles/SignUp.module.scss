@@ -1,3 +1,6 @@
+$primary: #FAF7F2;
+$secondary: #FDC913;
+
 %input-layout {
     padding: 1rem;
     width: 20rem;
@@ -7,17 +10,19 @@
 
 .container {
     display: flex;
-    background-color: darkgray;
-    padding: 3rem;
+    background-color: $primary;
+    padding: 2rem;
     border-radius: 1rem;
 }
 
 .container div {
-    margin: 0 2rem 0 2rem;
+    margin: 0 1rem 0 1rem;
 }
 
 .redText{
-    color: red;
+    color: #D80027;
+    font-weight: bold;
+    font-size:x-large;
 }
 
 .inputField {
@@ -28,12 +33,12 @@
 
 .inputField:focus {
     outline: none;
-    border: 1px solid orange;
+    border: 1px solid $secondary;
 }
 
 .submitButton{
     @extend %input-layout;
     border: none;
-    background-color: orange;
+    background-color: $secondary;
     cursor: pointer;
 }

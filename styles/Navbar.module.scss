@@ -1,3 +1,5 @@
+$secondary: #FDC913;
+
 .header {
     display: flex;
     justify-content: space-between;
@@ -26,11 +28,11 @@
 }
 
 .topnav a:hover {
-    border-bottom: 3px solid orange;
+    border-bottom: 3px solid $secondary;
 }
 
 .topnav a.active {
-    border-bottom: 3px solid orange;
+    border-bottom: 3px solid $secondary;
 }
 
 .cart {
@@ -46,7 +48,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: red;
+    background-color: #D80027;
     border-radius: 50%;
     color: white;
     width: 1.1rem;
@@ -61,7 +63,6 @@
     margin-left: 1.5rem;
     padding: 0.75rem 2rem;
     border-radius: 1rem;
-    background-color: orange;
     font-size: large;
     border: none;
     cursor: pointer;

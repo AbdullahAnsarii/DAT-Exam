@@ -1,9 +1,12 @@
+$primary: #FAF7F2;
+$secondary: #FDC913;
+
 .container {
     display: flex;
     margin: 3rem 0 3rem 0;
 }
 
-@mixin card-layout($color: DarkGray) {
+@mixin card-layout($color: $primary) {
     padding: 2rem;
     background: $color;
     width: calc(100%/3);
@@ -17,5 +20,5 @@
 }
 
 .card:nth-child(even) {
-    @include card-layout($color: orange);
+    @include card-layout($color: $secondary);
 }
