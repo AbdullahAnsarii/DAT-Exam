@@ -1,0 +1,39 @@
+%input-layout {
+    padding: 1rem;
+    width: 20rem;
+    margin-bottom: 0.5rem;
+    border-radius: 0.25rem;
+}
+
+.container {
+    display: flex;
+    background-color: darkgray;
+    padding: 3rem;
+    border-radius: 1rem;
+}
+
+.container div {
+    margin: 0 2rem 0 2rem;
+}
+
+.redText{
+    color: red;
+}
+
+.inputField {
+    @extend %input-layout;
+    border: 1px solid white;
+    font-size: large;
+}
+
+.inputField:focus {
+    outline: none;
+    border: 1px solid orange;
+}
+
+.submitButton{
+    @extend %input-layout;
+    border: none;
+    background-color: orange;
+    cursor: pointer;
+}

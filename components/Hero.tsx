@@ -7,10 +7,10 @@ const Hero: FC = () => {
         <section className={styles.container}>
             <div className={styles.detail}>
                 <div >
-                    <h1 className={styles.heading}> Different Spice For A Different Taste </h1>
+                    <h1> Different Spice For A Different Taste </h1>
                 </div>
                 <div>
-                    <p className={styles.paragraph}>
+                    <p>
                         Lorem ipsum dolor sit amet consectetur adipiscing elit,
                         nulla enim posuere quis consequat.
                     </p>

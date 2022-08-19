@@ -1,10 +1,10 @@
-import type { NextPage } from 'next'
-import Head from 'next/head'
-import Image from 'next/image'
-import ContactCards from '../components/ContactCards'
-import Hero from '../components/Hero'
-import Navbar from '../components/Navbar'
-import styles from '../styles/Home.module.scss'
+import type { NextPage } from 'next';
+import Head from 'next/head';
+import ContactCards from '../components/ContactCards';
+import Hero from '../components/Hero';
+import Navbar from '../components/Navbar';
+import SignUp from '../components/SignUp';
+import styles from '../styles/Home.module.scss';
 
 const Home: NextPage = () => {
   return (
@@ -18,6 +18,7 @@ const Home: NextPage = () => {
       <Navbar />
       <Hero />
       <ContactCards />
+      <SignUp />
     </div>
   )
 }
