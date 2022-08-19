@@ -1,0 +1,21 @@
+.container {
+    display: flex;
+    margin: 3rem 0 3rem 0;
+}
+
+@mixin card-layout($color: DarkGray) {
+    padding: 2rem;
+    background: $color;
+    width: calc(100%/3);
+    text-align: center;
+    border-radius: 1rem;
+    margin: 0 1rem 0 1rem;
+}
+
+.card:nth-child(odd) {
+    @include card-layout;
+}
+
+.card:nth-child(even) {
+    @include card-layout($color: orange);
+}

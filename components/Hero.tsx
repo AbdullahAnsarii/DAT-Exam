@@ -4,7 +4,7 @@ import styles from "../styles/Hero.module.scss";
 
 const Hero: FC = () => {
     return (
-        <div className={styles.container}>
+        <section className={styles.container}>
             <div className={styles.detail}>
                 <div >
                     <h1 className={styles.heading}> Different Spice For A Different Taste </h1>
@@ -23,7 +23,7 @@ const Hero: FC = () => {
             <div className={styles.image}>
                 <Image src='/Slider Food Image.png' alt="" width="800" height="500" />
             </div>
-        </div>
+        </section>
     )
 }
 
