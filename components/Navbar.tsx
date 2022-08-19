@@ -1,6 +1,6 @@
 import { FC } from "react";
 import Image from "next/image";
-import styles from "../styles/Header.module.scss";
+import styles from "../styles/Navbar.module.scss";
 
 const Navbar: FC = () => {
     return (

@@ -2,6 +2,7 @@ import type { NextPage } from 'next';
 import Head from 'next/head';
 import ContactCards from '../components/ContactCards';
 import Hero from '../components/Hero';
+import Menu from '../components/Menu';
 import Navbar from '../components/Navbar';
 import SignUp from '../components/SignUp';
 import styles from '../styles/Home.module.scss';
@@ -19,6 +20,7 @@ const Home: NextPage = () => {
       <Hero />
       <ContactCards />
       <SignUp />
+      <Menu />
     </div>
   )
 }
