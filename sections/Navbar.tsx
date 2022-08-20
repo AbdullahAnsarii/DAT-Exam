@@ -13,7 +13,7 @@ const Navbar: FC = () => {
             </div>
 
             <div className={styles.topnav}>
-                <Link href="#home">
+                <Link href="/">
                     <a
                         onClick={() => setActiveNav("home")}
                         id={activeNav == "home" ? styles.active : undefined}>Home</a>

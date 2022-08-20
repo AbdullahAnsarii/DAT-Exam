@@ -1,12 +1,30 @@
-import type { NextPage } from 'next';
+import type { GetServerSideProps, GetStaticProps, NextPage } from 'next';
 import Head from 'next/head';
-import ContactCards from '../components/ContactCards';
-import Hero from '../components/Hero';
-import Menu from '../components/Menu';
-import SignUp from '../components/SignUp';
+import ContactCards from '../sections/ContactCards';
+import Hero from '../sections/Hero';
+import Menu from '../sections/Menu';
+import SignUp from '../sections/SignUp';
+import ContactsInterface from '../interfaces/Contacts';
 import styles from '../styles/Home.module.scss';
 
-const Home: NextPage = () => {
+export const getStaticProps: GetStaticProps = async () => {
+  let contacts = null;
+  await fetch('http://54.169.31.224:3000/contact')
+    .then(async (res) => {
+      contacts = await res.json();
+    })
+    .catch((error) => {
+      console.log(error.code, 'err')
+    });
+
+  return {
+    props: {
+      contacts: contacts
+    }
+  }
+}
+
+const Home: NextPage<{ contacts: ContactsInterface }> = ({ contacts }) => {
   return (
     <div className={styles.container}>
       <Head>
@@ -16,11 +34,13 @@ const Home: NextPage = () => {
       </Head>
 
       <Hero />
-      <ContactCards />
+      <ContactCards contacts={contacts} />
       <SignUp />
       <Menu />
+
+
     </div>
   )
 }
 
-export default Home
+export default Home;

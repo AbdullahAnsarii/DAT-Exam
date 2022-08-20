@@ -7,7 +7,7 @@ $secondary: #FDC913;
 }
 
 @mixin card-layout($color: $primary) {
-    padding: 2rem;
+    padding: 1rem;
     background: $color;
     width: calc(100%/3);
     text-align: center;
