@@ -42,3 +42,16 @@ $secondary: #FDC913;
     background-color: $secondary;
     cursor: pointer;
 }
+
+.successMsg{
+    @extend %input-layout;
+    border: 1px solid darkgreen;
+    background-color: greenyellow;
+    color: darkgreen;
+}
+.errorMsg{
+    @extend %input-layout;
+    border: 1px solid maroon;
+    background-color: red;
+    color: maroon;
+}
