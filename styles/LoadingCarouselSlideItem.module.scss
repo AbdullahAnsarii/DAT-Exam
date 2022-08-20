@@ -1,0 +1,71 @@
+.loadingCarouselSlideItemWrapper{
+    display: flex;
+}
+.loadingCarouselSlideItem{
+    position: relative;
+    background-color: #FFF;
+    border-radius: 1rem;
+    height: 23rem;
+    overflow: hidden;
+    width: 15rem;
+    margin: 1.5rem;
+  
+  .shimmerBG {
+    animation-duration: 2.2s;
+    animation-fill-mode: forwards;
+    animation-iteration-count: infinite;
+    animation-name: shimmer;
+    animation-timing-function: linear;
+    background: linear-gradient(to right, #D6D6D6 8%, #F0F0F0 18%, #D6D6D6 33%);
+    background-size: 200rem 100%;
+}
+
+
+@-webkit-keyframes shimmer {
+    0% {
+        background-position: -100% 0;
+    }
+    100% {
+        background-position: 100% 0;
+    }
+}
+
+@keyframes shimmer {
+    0% {
+        background-position: -200rem 0;
+    }
+    100% {
+        background-position: 200rem 0;
+    }
+}
+  
+    .media {
+    height: 15rem;
+}
+
+.p32 {
+    padding: 32px 0 32px 0;
+}
+
+.titleLine {
+    height: 24px;
+    width: 100%;
+    margin-bottom: 12px;
+    border-radius: 20px;
+}
+
+.contentLine {
+    height: 8px;
+    width: 100%;
+    margin-bottom: 16px;
+    border-radius: 8px;
+}
+  
+  .end {
+      width: 40%;
+    }
+
+}
+.mT24 {
+    margin-top: 24px;
+}

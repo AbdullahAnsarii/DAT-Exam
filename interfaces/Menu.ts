@@ -13,5 +13,15 @@ export interface CategoriesInterface {
 export interface CarouselSlideInterface {
     key: number,
     pos: number,
-    idx: number
+    idx: number,
+    _items: {
+        id: string,
+        slug: string,
+        title: string,
+        category: string,
+        image: string,
+        price: number,
+        currency: string,
+        availableQuantity: number
+    }[]
 }
