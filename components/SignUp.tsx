@@ -3,7 +3,7 @@ import styles from "../styles/SignUp.module.scss";
 
 const SignUp: FC = () => {
     return (
-        <section className={styles.container}>
+        <section id="form" className={styles.container}>
             <div>
                 <h1>Receive payments quickly from anywhere</h1>
                 <p>Why kept very ever home mrs. Considered sympathize ten uncommonly occasional assistance sufficient not.

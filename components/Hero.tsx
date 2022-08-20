@@ -4,7 +4,7 @@ import styles from "../styles/Hero.module.scss";
 
 const Hero: FC = () => {
     return (
-        <section className={styles.container}>
+        <section id="home" className={styles.container}>
             <div className={styles.detail}>
                 <div >
                     <h1> Different Spice For A Different Taste </h1>
