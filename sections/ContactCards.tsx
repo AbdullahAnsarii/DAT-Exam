@@ -1,6 +1,6 @@
 import { FC } from "react";
 import styles from "../styles/ContactCards.module.scss";
-import ContactsInterface from "../interfaces/Contacts";
+import {ContactsInterface} from "../interfaces/ContactCards";
 import ContactCard from "../components/ContactCard";
 
 const ContactCards: FC<{ contacts: ContactsInterface }> = ({ contacts }) => {
