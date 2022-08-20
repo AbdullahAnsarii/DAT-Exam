@@ -5,7 +5,7 @@ import ContactInterface from "../interfaces/Contacts";
 
 const ContactCard: FC<{contact: ContactInterface}> = ({contact}) => {
     return (
-        <div key={contact.id} className={styles.card}>
+        <div className={styles.card}>
             <Image src={contact.icon} width="50px" height="50px" />
             <p>{contact.description}</p>
             <h3>{contact.title}</h3>
