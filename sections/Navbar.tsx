@@ -1,8 +1,11 @@
-import { FC } from "react";
+import { FC, useState } from "react";
 import Image from "next/image";
 import styles from "../styles/Navbar.module.scss";
+import Link from "next/link";
 
 const Navbar: FC = () => {
+    const [activeNav, setActiveNav] = useState("home");
+
     return (
         <header className={styles.header}>
             <div>
@@ -10,12 +13,24 @@ const Navbar: FC = () => {
             </div>
 
             <div className={styles.topnav}>
-                <a className={styles.active} href="#home">Home</a>
-                <a href="#news">News</a>
-                <a href="#contact">Contact</a>
+                <Link href="/">
+                    <a
+                        onClick={() => setActiveNav("home")}
+                        id={activeNav == "home" ? styles.active : undefined}>Home</a>
+                </Link>
+                <Link href="#form" >
+                    <a
+                        onClick={() => setActiveNav("form")}
+                        id={activeNav == "form" ? styles.active : undefined}>Form</a>
+                </Link>
+                <Link href="#menu" >
+                    <a
+                        onClick={() => setActiveNav("menu")}
+                        id={activeNav == "menu" ? styles.active : undefined}>Menu</a>
+                </Link>
             </div>
 
-            <div style={{display: 'flex', justifyContent: 'space-between'}}>
+            <div style={{ display: 'flex', justifyContent: 'space-between' }}>
                 <button
                     onClick={() => alert("hooray")}
                     className={styles.cart}
@@ -32,7 +47,7 @@ const Navbar: FC = () => {
                         3
                     </div>
                 </button>
-                <button  onClick={() => alert("hooray")} className={styles.button}>
+                <button onClick={() => alert("hooray")} className={styles.button}>
                     Log In
                 </button>
             </div>

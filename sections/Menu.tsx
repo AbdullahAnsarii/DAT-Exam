@@ -142,7 +142,7 @@ const Menu:FC = () =>{
     }, [isTicking]);
 
     return(
-        <section>
+        <section id="menu">
             <div className={styles.intro}>
                 <h1>Our Popular Menu</h1>
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut imperdiet tempus dolor sed auctor. Volutpat facilisi in imperdiet quam penatibus ut</p>
