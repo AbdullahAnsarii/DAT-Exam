@@ -1,7 +1,7 @@
 import { FC } from "react";
 import Image from "next/image";
 import styles from "../styles/ContactCards.module.scss";
-import ContactInterface from "../interfaces/Contacts";
+import {ContactInterface} from "../interfaces/ContactCards";
 
 const ContactCard: FC<{contact: ContactInterface}> = ({contact}) => {
     return (

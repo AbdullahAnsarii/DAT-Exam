@@ -1,4 +1,4 @@
-export default interface ContactInterface {
+export interface ContactInterface {
     id: number,
     slug: string,
     title: string,
@@ -6,7 +6,7 @@ export default interface ContactInterface {
     icon: string
 }
 
-export default interface ContactsInterface {
+export interface ContactsInterface {
     message: string,
     statusCode: number,
     data: ContactInterface[]
