@@ -14,8 +14,9 @@ const Menu: FC<{ categories: CategoriesInterface, cart: MenuItem[], setCart:Disp
     const [bigLength, setBigLength] = useState(items.length);
     
     useEffect(() => {
+        //emptying state to show shimmer during fetch
         set_Items([]);
-        fetch(`http://54.169.31.224:3000/category/${activeTab}`)
+        fetch(`http://54.169.31.224:3000/category/${activeTab}`, {referrer:''})
             .then(async (res) => {
                 await res.json().then(response => {
                     set_Items(response.data);
@@ -26,7 +27,7 @@ const Menu: FC<{ categories: CategoriesInterface, cart: MenuItem[], setCart:Disp
                     setBigLength(_temp.length);
                 });
             })
-    }, [activeTab])
+    }, [activeTab])//wheneever tab get switched fetch the respective data again
 
     const sleep = (ms = 0) => {
         return new Promise((resolve) => setTimeout(resolve, ms));

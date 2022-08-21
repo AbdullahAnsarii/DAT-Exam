@@ -8,7 +8,7 @@ const CarouselSlideItem: FC<CarouselSlideInterface> = ({ pos, idx, _items, cart,
 
     const handleAddToCart = (id: string) => {
         const selectedItem = _items.find(item => item.id == id)!;
-        cart.push(selectedItem);
+        cart.push({...selectedItem, selectedQuantity: 1});
         localStorage.setItem('cartItems', JSON.stringify(cart));
         setCart([...cart])
     }

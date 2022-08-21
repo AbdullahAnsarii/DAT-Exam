@@ -20,7 +20,8 @@ export interface MenuItem {
     image: string,
     price: number,
     currency: string,
-    availableQuantity: number
+    availableQuantity: number,
+    selectedQuantity: number
 }
 
 export interface CarouselSlideInterface {
