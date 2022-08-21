@@ -7,10 +7,12 @@ import Menu from '../sections/Menu';
 import SignUp from '../sections/SignUp';
 import { ContactsInterface } from '../interfaces/ContactCards';
 import { CategoriesInterface, MenuItem } from '../interfaces/Menu';
+import Navbar from '../sections/Navbar';
+import Footer from '../sections/Footer';
 
 export const getStaticProps: GetStaticProps = async () => {
   let contacts = null;
-  let categories = null;
+  let categories = null; 
 
   await fetch('http://54.169.31.224:3000/contact')
     .then(async (res) => {
@@ -44,6 +46,8 @@ const Home: NextPage<{ contacts: ContactsInterface, categories: CategoriesInterf
           setCart(items);
       }
   }, []);
+
+
   return (
     <div>
       <Head>
@@ -52,11 +56,12 @@ const Home: NextPage<{ contacts: ContactsInterface, categories: CategoriesInterf
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
+      <Navbar cart={cart} setCart={setCart} />
       <Hero />
       <ContactCards contacts={contacts} />
       <SignUp />
       <Menu categories={categories} cart={cart} setCart={setCart} />
-
+      <Footer />
 
     </div>
   )

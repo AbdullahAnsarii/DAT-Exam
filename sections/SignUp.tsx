@@ -15,7 +15,7 @@ const SignUp: FC = () => {
             type: type,
             message: message
         })
-        setTimeout(() => {
+        setTimeout(() => { //clear error/success message after 3 seconds
             setPostResponse({
                 type: '',
                 message: ''
@@ -38,14 +38,14 @@ const SignUp: FC = () => {
             fetch('http://54.169.31.224:3000/signup', requestOptions)
                 .then(async (response) => {
                     switch (response.status) {
-                        case 201 || 200:
+                        case 201 || 200: //if success
                             (response.json()
                                 .then(parsedResponse => {
                                     handlePostResponse(parsedResponse.message, 'success');
                                 }))
                             break;
 
-                        case 400:
+                        case 400: //if validation error
                             (response.json()
                                 .then(parsedResponse => {
                                     let errors = "";
@@ -56,7 +56,7 @@ const SignUp: FC = () => {
                                 }))
                             break;
 
-                        default:
+                        default: //if anything bad happens e.g. internet connection breaks
                             handlePostResponse("Something bad happened, please try again", 'error');
                             break;
                     }

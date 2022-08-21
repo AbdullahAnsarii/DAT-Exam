@@ -3,38 +3,65 @@ $secondary: #FDC913;
 .header {
     display: flex;
     justify-content: space-between;
+
+    div {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
 }
 
-.header div {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
 
 .topnav {
     overflow: hidden;
+
+    a {
+        float: left;
+        display: block;
+        color: black;
+        text-align: center;
+        padding: 14px 0 6px 0;
+        margin: 0 20px;
+        text-decoration: none;
+        font-size: 17px;
+        border-bottom: 3px solid transparent;
+    }
+
+    a:hover {
+        border-bottom: 3px solid $secondary;
+    }
 }
 
-.topnav a {
-    float: left;
-    display: block;
-    color: black;
-    text-align: center;
-    padding: 14px 0 6px 0;
-    margin: 0 20px;
-    text-decoration: none;
-    font-size: 17px;
-    border-bottom: 3px solid transparent;
-}
-
-.topnav a:hover {
-    border-bottom: 3px solid $secondary;
-}
 
 #active {
     border-bottom: 3px solid $secondary;
 }
 
+.extras {
+    display: flex;
+    justify-content: space-between;
+}
+.cartViewWrapper {
+    position: absolute;
+    display: block !important;
+    top: 4rem;
+    right: 14rem;
+    padding: 1rem 2rem 1rem 2rem;
+    width: fit-content;
+    height: fit-content;
+    border-radius: 1rem;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    background-color: white;
+    z-index: 1;
+
+    .cartView {
+        flex-direction: column;
+
+        h2 {
+            font-size: 2.5rem;
+        }
+    }
+}
 .cart {
     background: none;
     border: none;
@@ -42,6 +69,19 @@ $secondary: #FDC913;
     width: 2.5rem;
     height: 2.5rem;
     position: relative;
+}
+
+.cartItem {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 1rem;
+    div{
+        flex-direction: column;
+    }
+    .flexRow{
+        flex-direction: row;
+    }
 }
 
 .badge {
@@ -67,3 +107,23 @@ $secondary: #FDC913;
     border: none;
     cursor: pointer;
 }
+
+.removeButton {
+    background: none;
+    border: none;
+    color: #D80027;
+    text-decoration: underline;
+    cursor: pointer;
+    margin-top: 1em;
+}
+
+.incrementButton {
+    background: rgba(249, 248, 246, 1);
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    margin: 0 1em;
+    padding: 0 0.5em;
+    font-size: x-large;
+}
+
