@@ -1,12 +1,11 @@
 import Image from "next/image";
-import { FC, useState, useEffect } from "react";
+import { FC, useState, useEffect, Dispatch, SetStateAction } from "react";
 import styles from "../styles/Menu.module.scss";
-import { CategoriesInterface } from "../interfaces/Menu";
+import { CategoriesInterface, MenuItem } from "../interfaces/Menu";
 import CarouselSlideItem from "../components/CarouselSlideItem";
 import LoadingCarouselSlide from "../components/LoadingCarouselSlide";
 
-const Menu: FC<{ categories: CategoriesInterface }> = ({ categories }) => {
-
+const Menu: FC<{ categories: CategoriesInterface, cart: MenuItem[], setCart:Dispatch<SetStateAction<MenuItem[]>> }> = ({ categories, cart, setCart }) => {
     const [activeTab, setActiveTab] = useState("pizza");
     const [_items, set_Items]: any = useState([]);
     const [keys, setKeys] = useState(Array.from(Array(_items.length).keys()));
@@ -19,7 +18,6 @@ const Menu: FC<{ categories: CategoriesInterface }> = ({ categories }) => {
         fetch(`http://54.169.31.224:3000/category/${activeTab}`)
             .then(async (res) => {
                 await res.json().then(response => {
-                    console.log(response, 'ers');
                     set_Items(response.data);
                     //since we wouldn't get the updated state immediately
                     const _temp = Array.from(Array(response.data.length).keys());
@@ -87,6 +85,8 @@ const Menu: FC<{ categories: CategoriesInterface }> = ({ categories }) => {
                                     idx={i}
                                     pos={pos}
                                     _items={_items}
+                                    cart={cart}
+                                    setCart={setCart}
                                 />
                             )) : <LoadingCarouselSlide />}
                         </ul>

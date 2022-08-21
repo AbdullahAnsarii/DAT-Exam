@@ -1,5 +1,5 @@
 import React, { FC } from "react";
-import styles from "../styles/LoadingCarouselSlideItem.module.scss";
+import styles from "../styles/LoadingCarouselSlide.module.scss";
 const LoadingCarouselSlide: FC = () => {
   
   const indexArray = [0, 1, 2, 3];
