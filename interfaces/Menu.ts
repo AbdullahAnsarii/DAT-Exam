@@ -1,3 +1,5 @@
+import { Dispatch, SetStateAction } from "react"
+
 export interface CategoryInterface {
     slug: string,
     name: string,
@@ -10,18 +12,22 @@ export interface CategoriesInterface {
     data: CategoryInterface[]
 }
 
+export interface MenuItem {
+    id: string,
+    slug: string,
+    title: string,
+    category: string,
+    image: string,
+    price: number,
+    currency: string,
+    availableQuantity: number
+}
+
 export interface CarouselSlideInterface {
     key: number,
     pos: number,
     idx: number,
-    _items: {
-        id: string,
-        slug: string,
-        title: string,
-        category: string,
-        image: string,
-        price: number,
-        currency: string,
-        availableQuantity: number
-    }[]
+    cart: MenuItem[],
+    setCart:Dispatch<SetStateAction<MenuItem[]>>
+    _items: MenuItem[]
 }
